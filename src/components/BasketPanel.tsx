@@ -87,9 +87,12 @@ const BasketPanel: React.FC = () => {
                       <button
                         aria-label={`Increase ${product.name}`}
                         onClick={() => dispatch(increaseQuantity(product.id))}
-                        className="bg-blue-400 hover:bg-blue-500 text-white w-7 h-7 rounded font-bold text-lg leading-none flex items-center justify-center transition-colors"
+                        className="bg-blue-400 hover:bg-blue-500 text-white w-7 h-7 rounded flex items-center justify-center transition-colors select-none"
                       >
-                        +
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                          <line x1="6" y1="1" x2="6" y2="11"/>
+                          <line x1="1" y1="6" x2="11" y2="6"/>
+                        </svg>
                       </button>
                       <span className="w-6 text-center font-semibold text-gray-800 tabular-nums">
                         {quantity}
@@ -97,9 +100,11 @@ const BasketPanel: React.FC = () => {
                       <button
                         aria-label={`Decrease ${product.name}`}
                         onClick={() => dispatch(decreaseQuantity(product.id))}
-                        className="border border-blue-400 text-blue-400 hover:bg-blue-50 w-7 h-7 rounded font-bold text-lg leading-none flex items-center justify-center transition-colors"
+                        className="border border-blue-400 text-blue-400 hover:bg-blue-50 w-7 h-7 rounded flex items-center justify-center transition-colors select-none"
                       >
-                        −
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                          <line x1="1" y1="6" x2="11" y2="6"/>
+                        </svg>
                       </button>
                     </div>
                   </div>
